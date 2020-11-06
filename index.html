@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <title>Graf</title>
+    <meta charset="UTF-8">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <script src="./js/myScript.js"></script>
+</head>
+<body>
+
+<template>
+    <div id="divText">
+        <input type="checkbox" id="checkText" onchange="textAmplitude()"><span class="amplSpan">Text: </span>
+        <input type="number" min="1" max="5" value="1" step="0.01" id="text" onchange="AmplitudeApply(this)"><br>
+    </div>
+    <div id="divSlider">
+        <input type="checkbox" id="checkSlider" onchange="sliderAmplitude()"><span class="amplSpan">Slider: </span>
+        <input type="range" min="1" max="5" value="1" id="slider" step="0.01" onchange="AmplitudeApply(this)">
+    </div>
+</template>
+
+    <div id="header">
+        <h1>FAJNY GRAF</h1>
+        <input type="checkbox" id="sin" name="sin" value="sin" checked onchange="sinCheck()">
+        <label for="sin">Sin(x) </label>
+
+        <input type="checkbox" id="cos" name="cos" value="cos" checked onchange="cosCheck()">
+        <label for="cos">Cos(x)</label><br>
+    </div>
+    <div id='chartDiv'></div>
+    <button id="turnItOff" onclick="stopChart()">KONEC!</button>
+
+    <footer>
+        <div id="chrtOptions">
+            <chart-options></chart-options>
+        </div>
+    </footer>
+</body>
+    
+</html>

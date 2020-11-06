@@ -1,0 +1,82 @@
+html {
+    font-size: 1.2rem;
+    height: 100%;
+    width: 100%;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+#header{
+    text-align: center;
+}
+
+#chartDiv{
+    min-width: 320px;
+    height: 50%;
+    max-width: 50%;
+    margin: auto;
+}
+
+#turnItOff{
+    height: 5%;
+    width: 10%;
+    background-color: #363535;
+    color: black;
+    border: 3px solid gold;
+    border-radius: 8px;
+    min-width: 200px;
+    min-height: 20px;
+    font-size: 1rem;
+    color: #beadad;
+    margin-left: 45%;
+}
+
+footer{
+    background-color: #beadad;
+    min-height: 200px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.amplSpan{
+    font-size: 1.5rem;
+    color: royalblue;
+    margin: 10px 20px;
+    font-weight: bolder;
+}
+
+#chrtOptions{
+    width: 40%;
+    margin: auto;
+}
+
+#divText{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#divSlider{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#text{
+    min-width: 200px;
+    min-height: 30px;
+    font-size: large;
+    float: right;
+    margin-right: 50%;
+    display: none;
+}
+
+#slider{
+    min-width: 200px;
+    min-height: 30px;
+    font-size: large;
+    float: right;
+    margin-right: 50%;
+    display: none;
+}
