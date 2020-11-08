@@ -7,15 +7,18 @@ function printChart()
     marker: {color: 'red', size: 10},
     line: {width: 4},
     type: 'scatter',
-    name: 'sin(x)'
+    name: 'sin(x)',
   }, {
     y: [],
     mode: 'lines+markers',
     marker: {color: 'blue', size:10},
     line: {width: 4},
     type: 'scatter',
-    name: 'cos(x)'
-  }]);
+    name: 'cos(x)',
+  }],{
+    yaxis: {fixedrange: true},
+    xaxis : {fixedrange: true}
+});
 }
 
 window.addEventListener('load', function () {
@@ -37,6 +40,10 @@ if(typeof(EventSource) !== "undefined") {
 function stopChart()
 {
   source.close();
+  Plotly.update('chartDiv', {}, {
+    yaxis: {fixedrange: false},
+    xaxis : {fixedrange: false},
+  });
 }
 
 function sinCheck()
@@ -71,12 +78,6 @@ class ChartOptions extends HTMLElement
 {
    constructor() {
      super();
-     this.addEventListener('click',
-     () => {
-        this.style.color === 'red'
-        ? this.style.color = 'blue':
-         this.style.color = 'red';
-      });
    }
 
 connectedCallback() {
@@ -107,7 +108,7 @@ function sliderAmplitude()
   if (document.getElementById("checkSlider").checked)
   {
     document.getElementById("slider").style.display = "block";
-  }else {
+  } else {
     document.getElementById("slider").style.display = "none";
   }
 }
