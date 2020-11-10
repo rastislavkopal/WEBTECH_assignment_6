@@ -108,8 +108,10 @@ function sliderAmplitude()
   if (document.getElementById("checkSlider").checked)
   {
     document.getElementById("slider").style.display = "block";
+    document.getElementById("amount").style.display = "block";
   } else {
     document.getElementById("slider").style.display = "none";
+    document.getElementById("amount").style.display = "none";
   }
 }
 
@@ -139,4 +141,7 @@ function AmplitudeApply(element)
     document.getElementById("text").value = amplitude;
   }
 
+}
+function updateTextInput(val) {
+  document.getElementById('textInput').value=val; 
 }

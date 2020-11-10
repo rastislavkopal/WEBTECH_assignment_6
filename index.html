@@ -18,8 +18,10 @@
     </div>
     <div id="divSlider">
         <input type="checkbox" id="checkSlider" onchange="sliderAmplitude()"><span class="amplSpan">Slider: </span>
-        <input type="range" min="1" max="5" value="1" id="slider" step="0.01" onchange="AmplitudeApply(this)">
+        <input type="range" min="1" max="5" value="1" id="slider" step="0.01" onchange="AmplitudeApply(this)" oninput="amount.value=slider.value">
+        <output id="amount" name="amount" for="rangeInput">0</output>
     </div>
+    
 </template>
 
     <div id="header">
@@ -38,6 +40,8 @@
             <chart-options></chart-options>
         </div>
     </footer>
+
+    
 </body>
     
 </html>

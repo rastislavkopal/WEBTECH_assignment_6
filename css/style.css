@@ -80,3 +80,8 @@ footer{
     margin-right: 50%;
     display: none;
 }
+
+#amount{
+    display: none;
+    float: right;
+}
